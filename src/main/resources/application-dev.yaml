@@ -1,0 +1,31 @@
+info:
+  build:
+    name: custom-analyzer
+    version: 1.0-SNAPSHOT
+
+analyzer:
+  name: ${info.build.name}
+  priority: 1
+  index-support: true
+  search-support: true
+  version: ${info.build.version}
+
+queue:
+  analyze: analyze
+  index: index
+  search: search
+  clean: clean
+  delete: delete
+
+routing:
+  analyze: ${analyzer.name}.${queue.analyze}
+  index: ${analyzer.name}.${queue.index}
+  search: ${analyzer.name}.${queue.search}
+
+amqp:
+  address: amqp://${amqp.user}:${amqp.pass}@${amqp.host}:${amqp.port}
+  host: localhost
+  port: 5672
+  user: rabbitmq
+  pass: rabbitmq
+  virtual-host: analyzer

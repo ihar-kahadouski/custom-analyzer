@@ -1,0 +1,44 @@
+plugins {
+    id 'java'
+    id 'org.springframework.boot' version '2.2.0.RELEASE'
+}
+
+sourceCompatibility = 1.8
+
+ext {
+    springBootVersion = '2.2.0.RELEASE'
+    jacksonVersion = '2.10.0'
+    logbackVersion = '1.2.3'
+}
+
+springBoot {
+    buildInfo()
+}
+
+repositories {
+    mavenCentral()
+}
+
+dependencies {
+    compile "org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}"
+    compile "org.springframework.boot:spring-boot-starter-amqp:${springBootVersion}"
+
+    compile "com.fasterxml.jackson.core:jackson-databind:${jacksonVersion}"
+    compile "com.fasterxml.jackson.datatype:jackson-datatype-jsr310:${jacksonVersion}"
+
+    compile group: 'com.google.guava', name: 'guava', version: '28.1-jre'
+
+    compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.28'
+    compile "ch.qos.logback:logback-core:${logbackVersion}"
+    compile "ch.qos.logback:logback-classic:${logbackVersion}"
+
+    testCompile group: 'junit', name: 'junit', version: '4.12'
+}
+
+processResources {
+    expand(project.properties)
+}
+
+wrapper {
+    gradleVersion = '5.4.1'
+}

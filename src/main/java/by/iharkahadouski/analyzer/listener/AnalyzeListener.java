@@ -23,7 +23,8 @@ public class AnalyzeListener {
 
 	@RabbitListener(queues = "${queue.analyze}")
 	@SendTo("${routing.analyze}")
-	public List<AnalyzedItemRs> handle(IndexLaunch request) {
-		return analyzer.analyze(request);
+	public List<AnalyzedItemRs> handle(IndexLaunch[] request) {
+		return analyzer.analyze(request[0]);
 	}
 }
+		

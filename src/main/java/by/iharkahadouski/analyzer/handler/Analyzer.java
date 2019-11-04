@@ -1,7 +1,7 @@
 package by.iharkahadouski.analyzer.handler;
 
-import by.iharkahadouski.analyzer.model.AnalyzedItemRs;
-import by.iharkahadouski.analyzer.model.IndexLaunch;
+import com.epam.ta.reportportal.ws.model.analyzer.AnalyzedItemRs;
+import com.epam.ta.reportportal.ws.model.analyzer.IndexLaunch;
 
 import java.util.List;
 
@@ -10,5 +10,5 @@ import java.util.List;
  */
 public interface Analyzer {
 
-	List<AnalyzedItemRs> analyze(IndexLaunch request);
+	List<AnalyzedItemRs> analyze(List<IndexLaunch> request);
 }

@@ -1,6 +1,6 @@
 package by.iharkahadouski.analyzer.handler;
 
-import by.iharkahadouski.analyzer.model.SearchRq;
+import com.epam.ta.reportportal.ws.model.analyzer.SearchRq;
 
 import java.util.List;
 

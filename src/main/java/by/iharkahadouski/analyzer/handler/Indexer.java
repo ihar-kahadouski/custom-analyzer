@@ -1,7 +1,7 @@
 package by.iharkahadouski.analyzer.handler;
 
-import by.iharkahadouski.analyzer.model.CleanIndexRq;
-import by.iharkahadouski.analyzer.model.IndexLaunch;
+import com.epam.ta.reportportal.ws.model.analyzer.CleanIndexRq;
+import com.epam.ta.reportportal.ws.model.analyzer.IndexLaunch;
 
 import java.util.List;
 

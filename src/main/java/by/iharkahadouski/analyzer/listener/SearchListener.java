@@ -1,7 +1,7 @@
 package by.iharkahadouski.analyzer.listener;
 
 import by.iharkahadouski.analyzer.handler.Searcher;
-import by.iharkahadouski.analyzer.model.SearchRq;
+import com.epam.ta.reportportal.ws.model.analyzer.SearchRq;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.SendTo;

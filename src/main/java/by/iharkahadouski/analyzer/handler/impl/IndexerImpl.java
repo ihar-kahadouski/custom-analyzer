@@ -1,9 +1,9 @@
 package by.iharkahadouski.analyzer.handler.impl;
 
 import by.iharkahadouski.analyzer.handler.Indexer;
-import by.iharkahadouski.analyzer.model.CleanIndexRq;
-import by.iharkahadouski.analyzer.model.IndexLaunch;
-import by.iharkahadouski.analyzer.model.IndexTestItem;
+import com.epam.ta.reportportal.ws.model.analyzer.CleanIndexRq;
+import com.epam.ta.reportportal.ws.model.analyzer.IndexLaunch;
+import com.epam.ta.reportportal.ws.model.analyzer.IndexTestItem;
 import org.springframework.stereotype.Component;
 
 import java.util.HashMap;

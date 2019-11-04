@@ -1,7 +1,7 @@
 info:
   build:
-    name: custom-analyzer
-    version: 1.0-SNAPSHOT
+    name: ${name:custom-analyzer}
+    version: ${vesrion:1.0-SNAPSHOT}
 
 analyzer:
   name: ${info.build.name}

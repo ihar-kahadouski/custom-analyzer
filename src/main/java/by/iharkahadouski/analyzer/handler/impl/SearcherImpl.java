@@ -1,7 +1,7 @@
 package by.iharkahadouski.analyzer.handler.impl;
 
 import by.iharkahadouski.analyzer.handler.Searcher;
-import by.iharkahadouski.analyzer.model.SearchRq;
+import com.epam.ta.reportportal.ws.model.analyzer.SearchRq;
 import org.springframework.stereotype.Component;
 
 import java.util.List;
@@ -11,7 +11,6 @@ import java.util.List;
  */
 @Component
 public class SearcherImpl implements Searcher {
-
 
 	@Override
 	public List<Long> search(SearchRq request) {

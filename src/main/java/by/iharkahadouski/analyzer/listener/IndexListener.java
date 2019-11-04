@@ -1,8 +1,8 @@
 package by.iharkahadouski.analyzer.listener;
 
 import by.iharkahadouski.analyzer.handler.Indexer;
-import by.iharkahadouski.analyzer.model.CleanIndexRq;
-import by.iharkahadouski.analyzer.model.IndexLaunch;
+import com.epam.ta.reportportal.ws.model.analyzer.CleanIndexRq;
+import com.epam.ta.reportportal.ws.model.analyzer.IndexLaunch;
 import org.springframework.amqp.rabbit.annotation.RabbitListener;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.messaging.handler.annotation.SendTo;

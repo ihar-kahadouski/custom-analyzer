@@ -17,9 +17,12 @@ springBoot {
 
 repositories {
     mavenCentral()
+    maven { url 'https://jitpack.io' }
 }
 
 dependencies {
+    compile 'com.github.reportportal:commons-model:5f85990'
+
     compile "org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}"
     compile "org.springframework.boot:spring-boot-starter-amqp:${springBootVersion}"
 

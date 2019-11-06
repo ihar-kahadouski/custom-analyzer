@@ -31,12 +31,12 @@ public class AnalyzerArgumentsBuilder {
 	}
 
 	public AnalyzerArgumentsBuilder withIndexSupport(boolean indexSupport) {
-		arguments.put(ANALYZER_INDEX_KEY, String.valueOf(indexSupport));
+		arguments.put(ANALYZER_INDEX_KEY, indexSupport);
 		return this;
 	}
 
 	public AnalyzerArgumentsBuilder withSearchSupport(boolean searchSupport) {
-		arguments.put(ANALYZER_LOG_SEARCH_KEY, String.valueOf(searchSupport));
+		arguments.put(ANALYZER_LOG_SEARCH_KEY, searchSupport);
 		return this;
 	}
 

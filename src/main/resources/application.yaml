@@ -1,14 +1,9 @@
-info:
-  build:
-    name: ${name}
-    version: ${version}
-
 analyzer:
-  name: \${info.build.name}
+  name: ${info.build.name:custom-analyzer}
   priority: 1
   index-support: true
   search-support: true
-  version: \${info.build.version}
+  version: ${info.build.version:1.0-SNAPSHOT}
 
 queue:
   analyze: analyze
@@ -18,12 +13,12 @@ queue:
   delete: delete
 
 routing:
-  analyze: \${analyzer.name}.\${queue.analyze}
-  index: \${analyzer.name}.\${queue.index}
-  search: \${analyzer.name}.\${queue.search}
+  analyze: ${analyzer.name}.${queue.analyze}
+  index: ${analyzer.name}.${queue.index}
+  search: ${analyzer.name}.${queue.search}
 
 amqp:
-  address: amqp://\${amqp.user}:\${amqp.pass}@\${amqp.host}:\${amqp.port}
+  address: amqp://${amqp.user}:${amqp.pass}@${amqp.host}:${amqp.port}
   host: rabbitmq
   port: 5672
   user: rabbitmq

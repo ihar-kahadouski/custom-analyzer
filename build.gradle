@@ -3,7 +3,7 @@ plugins {
     id 'org.springframework.boot' version '2.2.0.RELEASE'
 }
 
-sourceCompatibility = 1.8
+sourceCompatibility = JavaVersion.VERSION_11
 
 ext {
     springBootVersion = '2.2.0.RELEASE'
@@ -21,7 +21,7 @@ repositories {
 }
 
 dependencies {
-    compile 'com.github.reportportal:commons-model:5f85990'
+    compile 'com.github.reportportal:commons-model:a63246f'
 
     compile "org.springframework.boot:spring-boot-configuration-processor:${springBootVersion}"
     compile "org.springframework.boot:spring-boot-starter-amqp:${springBootVersion}"
@@ -34,14 +34,14 @@ dependencies {
     compile group: 'org.slf4j', name: 'slf4j-api', version: '1.7.28'
     compile "ch.qos.logback:logback-core:${logbackVersion}"
     compile "ch.qos.logback:logback-classic:${logbackVersion}"
-
-    testCompile group: 'junit', name: 'junit', version: '4.12'
 }
 
 processResources {
-    expand(project.properties)
+    filesMatching('application.properties') {
+        expand(project.properties)
+    }
 }
 
 wrapper {
-    gradleVersion = '5.4.1'
+    gradleVersion = '6.0'
 }
